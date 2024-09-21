@@ -1,0 +1,58 @@
+.error_page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.four_zero_four {
+    font-size: 100px;
+    line-height: 100px;
+    color: var(--primary-color);
+    margin-top: 25px;
+}
+
+
+.background_img {
+    background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.text {
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text h1 {
+    color: var(--primary-color);
+}
+
+.text p {
+    font-size: 17px;
+}
+
+.button {
+    width: 150px;
+    height: 45px;
+    color: white;
+    background-color: #39AD31;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all .2s ease;
+}
+
+.button:hover {
+    background-color: #065b00;
+}

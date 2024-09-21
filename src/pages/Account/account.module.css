@@ -1,0 +1,116 @@
+.page_container {
+    width: 82vw;
+    height: calc(100vh - 55px);
+    overflow: hidden;
+    border-top-left-radius: 15px;
+}
+
+.page_container2 {
+    width: 100vw;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+.account_detail_page {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 19%, rgba(232, 236, 255, 1) 100%);
+}
+
+
+
+.user_card {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    height: 45vh;
+    width: 100%;
+    align-items: center;
+}
+
+.user_img {
+    background-color: rgb(154, 199, 255);
+    width: 40vh;
+    height: 40vh;
+}
+
+.user_details {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: space-around;
+}
+
+
+
+.more {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.title {
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+
+.table_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin-bottom: 5vh;
+}
+
+.titles,
+.items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.titles {
+    background-color: var(--primary-color);
+    color: white;
+    height: 40px;
+}
+
+.items {
+    background-color: rgb(233, 233, 233);
+    height: 30px;
+    font-weight: 600;
+}
+
+.item {
+    width: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.items .item:nth-child(2) {
+    color: green;
+}
+
+.items .item:nth-child(3) {
+    color: rgb(187, 146, 0);
+}
+
+.items .item:nth-child(4) {
+    color: red;
+}

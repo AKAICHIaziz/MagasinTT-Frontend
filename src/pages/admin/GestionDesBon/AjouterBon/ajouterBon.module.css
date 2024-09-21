@@ -1,0 +1,187 @@
+.page_container {
+    width: 82vw;
+    height: calc(100vh - 55px);
+    overflow: hidden;
+    border-top-left-radius: 15px;
+}
+
+.ajouterBon_page {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    font-size: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 19%, rgba(232, 236, 255, 1) 100%);
+}
+
+.page_title {
+    font-size: 30px;
+    font-weight: 600;
+    height: 50px;
+    color: var(--primary-color);
+}
+
+.refBon {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    border-left: 5px solid black;
+    padding-left: 10px;
+}
+
+.refBon label {
+    font-weight: 600;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+.input {
+    border: 2px solid var(--primary-color);
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.desc {
+    border: 2px solid var(--primary-color);
+    width: 200px;
+    height: 80px;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.product_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+    gap: 60px;
+}
+
+.group {
+    /* background-color: gray; */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form_group {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.prod_img {
+    margin-top: 20px;
+}
+
+.image_preview {
+    margin-top: 10px;
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+
+
+.accordion {
+    margin-bottom: 20px;
+}
+
+.accordion_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.delete_button {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    right: 50px;
+}
+
+.delete_button:hover {
+    background-color: darkred;
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add_button {
+    padding: 10px 20px;
+    color: var(--primary-color);
+    background-color: greenyellow;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 180px;
+    gap: 10px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all .1s ease;
+    cursor: pointer;
+}
+
+.add_button p {
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.add {
+    font-size: 19px;
+    color: var(--primary-color);
+}
+
+
+.submit_button {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--primary-color);
+    color: greenyellow;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}

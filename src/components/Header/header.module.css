@@ -1,0 +1,62 @@
+.info {
+    border-bottom: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: white;
+    height: 25px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--sm-font);
+}
+
+.left_side {
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+    margin-left: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.company {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
+
+.phone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+    padding-left: 25px;
+    border-left: 1px solid var(--secondary-color);
+}
+
+
+
+.right_side {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+.language {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 5px;
+    transition: all .2s ease;
+}
+
+.language:hover {
+    color: var(--primary-color);
+}

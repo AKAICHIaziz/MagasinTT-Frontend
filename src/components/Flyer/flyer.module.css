@@ -1,0 +1,53 @@
+.flyer_component{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flyer {
+    width: 90%;
+    height: 100px;
+    background-color: rgb(233, 233, 233);
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+
+.after_flyer {
+    display: flex;
+    flex-direction: row;
+    width: 88%;
+    height: 7vh;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.after {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.after_icon {
+    font-size: 25px;
+    color: var(--primary-color);
+}
+
+.after_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.after_title {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.after_desc {
+    font-size: 10px;
+    color: var(--secondary-color);
+}

@@ -1,0 +1,138 @@
+.sidebar {
+    height: calc(100vh - 80px);
+    width: 18vw;
+    min-width: 18vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.items::-webkit-scrollbar {
+    display: none;
+}
+
+.items {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    padding-top: 30px;
+    overflow: auto;
+    gap: 2px;
+}
+
+.item {
+    border-radius: 10px;
+    width: 15vw;
+    height: 50px;
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    padding-left: 20px;
+    color: rgb(100, 100, 100);
+    cursor: pointer;
+    transition: all .15s ease;
+}
+
+.item p {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(100, 100, 100);
+    transition: all .15s ease;
+}
+
+.ico {
+    transition: all .15s ease;
+}
+
+
+.left {
+    width: 100%;
+    border-left: 4px solid transparent;
+    padding-left: 15px;
+    transition: all .15s ease;
+}
+
+
+.left:hover,
+.left:hover p,
+.left:hover .ico {
+    color: rgb(14, 38, 177);
+}
+
+.left_active {
+    width: 100%;
+    border-left: 4px solid rgb(14, 38, 177);
+    padding-left: 15px;
+}
+
+.left_active p {
+    color: rgb(14, 38, 177);
+}
+
+.inner_item {
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    padding-left: 20px;
+    gap: 10px;
+    color: rgb(100, 100, 100);
+    cursor: pointer;
+    transition: all .15s ease;
+    border-left: 4px solid rgb(232, 236, 255);
+}
+
+.acc_active {
+    color: rgb(14, 38, 177);
+    border-left: 4px solid rgb(14, 38, 177)
+}
+
+/* .inner_item:hover {
+    font-weight: 700;
+} */
+
+.active {
+    background-color: rgb(232, 236, 255);
+    color: rgb(14, 38, 177);
+}
+
+
+.logout {
+    color: black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    padding-left: 20px;
+    gap: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+.logout:hover {
+    background-color: rgb(213, 220, 255);
+}
+
+.logout_icon {
+    color: black;
+    font-size: 18px;
+}
+
+.logout p {
+    color: black;
+    font-size: 14px;
+
+}

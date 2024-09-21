@@ -1,0 +1,43 @@
+body,
+html {
+  font-family: Poppins;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgb(0, 9, 53);
+  --secondary-color: rgb(144, 144, 144);
+  --sm-font: 11px;
+}
+
+
+
+
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color); 
+  border-radius: 4.5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #30356a; 
+}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styles from './chat.module.css';
 import axios from 'axios';
-import {jwtDecode} from 'jwt-decode'; // Ensure you import jwt-decode
+import { jwtDecode } from 'jwt-decode'; // Ensure you import jwt-decode
 import { IoSend } from "react-icons/io5";
 
 

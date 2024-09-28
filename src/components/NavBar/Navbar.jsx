@@ -72,7 +72,7 @@ function Navbar() {
   return (
     <div className={styles.navbar}>
 
-      <div className={styles.logo} onClick={() => handleLinkClick('/')}>Magasin-TT</div>
+      <div className={styles.logo} onClick={() => handleLinkClick('/')}>TT Intern Op</div>
 
       {test && (
         <div className={styles.container}>
@@ -97,7 +97,7 @@ function Navbar() {
       {!user.isStoreAdmin && !user.isAdmin && test && (<div className={`${styles.dropdown_menu} ${dropdownVisible ? styles.show : ''}`}>
         <div className={styles.menu_item} onClick={() => handleLinkClick('/magasin')}><FaShoppingBasket />Magasin</div>
         <div className={styles.menu_item} onClick={() => handleLinkClick('/my-requests')}><FaClipboardQuestion />My requests</div>
-        <div className={styles.menu_item} onClick={() => handleLinkClick('/chat')}><IoMdChatboxes />My requests</div>
+        <div className={styles.menu_item} onClick={() => handleLinkClick('/chat')}><IoMdChatboxes />Chat</div>
         <div className={styles.menu_item} onClick={() => handleLinkClick('/profile')}><FaUser className={styles.icon} />Profile</div>
         <div className={styles.menu_item} onClick={logout}>Log out</div>
       </div>)}

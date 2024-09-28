@@ -4,11 +4,10 @@ import axios from 'axios';
 import { format } from 'date-fns';
 import { useNavigate } from 'react-router-dom';
 
-
 function Requests() {
 
   const [requests, setRequests] = useState([]);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchRequests = async () => {
@@ -19,20 +18,20 @@ function Requests() {
             Authorization: `Bearer ${token}`,
           },
         });
-        setRequests(response.data.requests);
+
+        const sortedRequests = response.data.requests.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+        setRequests(sortedRequests);
       } catch (err) {
         console.log('Error fetching requests:', err);
       }
-    }
-    fetchRequests()
-  }, [])
-
+    };
+    fetchRequests();
+  }, []);
 
   const handleClick = (id) => {
-    navigate(`/bon-management/requests/${id}`);
+    navigate(`/requests/${id}`);
   };
-
-
 
   return (
     <div className={styles.page_container}>
@@ -77,12 +76,11 @@ function Requests() {
                   <p className={styles.content}>{request.createdAt ? format(new Date(request.createdAt), 'yyyy-MM-dd HH:mm:ss') : 'N/A'}</p>
                 </div>
                 <div className={styles.elem}>
-                  <p className={styles.content}>{request.status}</p>
+                  <p className={`${styles.content} ${styles[request.status.toLowerCase()]}`}>{request.status}</p>
                 </div>
               </div>
             ))
           }
-
 
         </div>
       </div>

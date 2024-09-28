@@ -95,12 +95,11 @@ function App() {
           <Route path='/bon-management/in/:NumBon' element={<ProtectedRoute element={Bon} allowedRoles={['storeAdmin', 'admin']} />} />
           <Route path='/bon-management/out' element={<ProtectedRoute element={OutBon} allowedRoles={['storeAdmin', 'admin']} />} />
           <Route path='/bon-management/out/:NumBon' element={<ProtectedRoute element={OutBon2} allowedRoles={['storeAdmin', 'admin']} />} />
-          <Route path='/bon-management/requests' element={<ProtectedRoute element={Requests} allowedRoles={['storeAdmin', 'admin']} />} />
-          <Route path='/bon-management/requests/:id' element={<ProtectedRoute element={Request} allowedRoles={['storeAdmin', 'admin']} />} />
+          <Route path='/requests' element={<ProtectedRoute element={Requests} allowedRoles={['storeAdmin', 'admin']} />} />
+          <Route path='/requests/:id' element={<ProtectedRoute element={Request} allowedRoles={['storeAdmin', 'admin']} />} />
           <Route path='/accounts-management/users' element={<ProtectedRoute element={AccountManagement} allowedRoles={['admin']} />} />
           <Route path='/accounts-management/:id' element={<ProtectedRoute element={AccountDetails} allowedRoles={['admin']} />} />
           <Route path='/accounts-management/signup-requests' element={<ProtectedRoute element={SignupRequests} allowedRoles={['admin']} />} />
-          <Route path='/accounts-management/signup-requests/:id' element={<ProtectedRoute element={ReqAccountDetails} allowedRoles={['admin']} />} />
           <Route path='/accounts-management/signup-requests/:id' element={<ProtectedRoute element={ReqAccountDetails} allowedRoles={['admin']} />} />
           <Route path='/chat' element={<ProtectedRoute element={Chat} allowedRoles={['admin', 'storeAdmin', 'employee']} />} />
           <Route path="*" element={<ErrorPage />} />

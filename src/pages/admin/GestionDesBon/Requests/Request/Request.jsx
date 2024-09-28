@@ -59,7 +59,7 @@ function Request() {
                     },
                 }
             );
-            navigate('/bon-management/requests');
+            navigate('/requests');
         } catch (err) {
             console.log('Error rejecting request:', err);
         }
@@ -81,7 +81,7 @@ function Request() {
                     },
                 }
             );
-            navigate('/bon-management/requests');
+            navigate('/requests');
         } catch (err) {
             console.log('Error rejecting request:', err);
         }

@@ -46,6 +46,7 @@
     justify-content: space-between;
     background-color: rgb(229, 231, 254);
     height: 50px;
+    min-height: 50px;
     width: 100%;
     cursor: pointer;
     transition: all .15s ease;
@@ -64,6 +65,7 @@
     justify-content: space-between;
     background-color: rgb(229, 231, 254);
     height: 40px;
+    min-height: 40px;
     width: 100%;
     cursor: pointer;
     gap: 5px;
@@ -91,4 +93,29 @@
     font-size: 15px;
     color: rgb(92, 92, 92);
     font-weight: 500;
+    
+}
+
+.rejected {
+    color: red;
+    background-color: rgb(255, 188, 188);
+    width: fit-content;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+
+.approved {
+    color: green;
+    background-color: rgb(204, 255, 129);
+    width: fit-content;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+
+.pending {
+    color: orange;
+    background-color: rgb(255, 243, 183);
+    width: fit-content;
+    padding: 2px 5px;
+    border-radius: 10px;
 }

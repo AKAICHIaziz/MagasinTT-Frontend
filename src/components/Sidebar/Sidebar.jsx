@@ -13,8 +13,6 @@ import { IoIosChatboxes } from "react-icons/io";
 
 
 
-
-
 function Sidebar() {
 
   const [user, setUser] = useState({ role: '', name: '' });
@@ -71,11 +69,10 @@ function Sidebar() {
   const BONManagementItems = [
     <div onClick={() => handleLinkClick('/bon-management/add')} className={`${styles.inner_item} ${isActive('/bon-management/add') ? styles.acc_active : ''}`}><FaPersonCircleQuestion className={styles.ico} />Add BON</div>,
     <div onClick={() => handleLinkClick('/bon-management/in')} className={`${styles.inner_item} ${isActive('/bon-management/in') ? styles.acc_active : ''}`}><FaPersonCircleQuestion className={styles.ico} />BON d'entrer</div>,
-    <div onClick={() => handleLinkClick('/bon-management/out')} className={`${styles.inner_item} ${isActive('/bon-management/out') ? styles.acc_active : ''}`}><FaPersonCircleQuestion className={styles.ico} />BON de sortie</div>,
-    <div onClick={() => handleLinkClick('/bon-management/requests')} className={`${styles.inner_item} ${isActive('/bon-management/requests') ? styles.acc_active : ''}`}><FaPersonCircleQuestion className={styles.ico} />Requests</div>
+    <div onClick={() => handleLinkClick('/bon-management/out')} className={`${styles.inner_item} ${isActive('/bon-management/out') ? styles.acc_active : ''}`}><FaPersonCircleQuestion className={styles.ico} />BON de sortie</div>
   ];
 
-  if (!user.isAdmin || !user.isStoreAdmin) {
+  if (!user.isStoreAdmin) {
     return null;
   }
 
@@ -83,11 +80,9 @@ function Sidebar() {
     <div className={styles.sidebar}>
       <div className={styles.items}>
 
-        {!user.isAdmin && !user.isStoreAdmin && (<div className={`${styles.item} ${isActive('/magasin') ? styles.active : ''}`} onClick={() => handleLinkClick('/magasin')}>Store</div>)}
+        {user.isStoreAdmin && (<div className={`${styles.left} ${isActive('/dashboard') ? styles.left_active : ''}`}><div className={`${styles.item} ${isActive('/dashboard') ? styles.active : ''}`} onClick={() => handleLinkClick('/dashboard')}><MdDashboard className={styles.ico} /><p>Dashboard</p></div></div>)}
 
-        {user.isAdmin && user.isStoreAdmin && (<div className={`${styles.left} ${isActive('/dashboard') ? styles.left_active : ''}`}><div className={`${styles.item} ${isActive('/dashboard') ? styles.active : ''}`} onClick={() => handleLinkClick('/dashboard')}><MdDashboard className={styles.ico} /><p>Dashboard</p></div></div>)}
-
-        {user.isAdmin && user.isStoreAdmin && (<div className={`${styles.left} ${isActive('/products') ? styles.left_active : ''}`}><div className={`${styles.item} ${isActive('/products') ? styles.active : ''}`} onClick={() => handleLinkClick('/products')}><MdInventory className={styles.ico} /><p>Products management</p></div></div>)}
+        {user.isStoreAdmin && (<div className={`${styles.left} ${isActive('/products') ? styles.left_active : ''}`}><div className={`${styles.item} ${isActive('/products') ? styles.active : ''}`} onClick={() => handleLinkClick('/products')}><MdInventory className={styles.ico} /><p>Products management</p></div></div>)}
 
         {user.isAdmin && (
           <Accordion
@@ -105,19 +100,11 @@ function Sidebar() {
           />
         )}
 
+        {user.isStoreAdmin && (<div className={`${styles.left} ${isActive('/requests') ? styles.left_active : ''}`}><span className={`${styles.item} ${isActive('/requests') ? styles.active : ''}`} onClick={() => handleLinkClick('/requests')}><FaPersonCircleQuestion className={styles.ico} /><p>Requests</p></span></div>)}
 
-        {/* {user.isAdmin && user.isStoreAdmin && (<span className={`${styles.item} ${isActive('/gestion-des-bons') ? styles.active : ''}`} onClick={() => handleLinkClick('/gestion-des-bons')}><FaFileInvoice className={styles.ico} /><p>BON management</p></span>)} */}
+        {user.isStoreAdmin && (<div className={`${styles.left} ${isActive('/chat') ? styles.left_active : ''}`}><span className={`${styles.item} ${isActive('/chat') ? styles.active : ''}`} onClick={() => handleLinkClick('/chat')}><IoIosChatboxes className={styles.ico} /><p>Chat</p></span></div>)}
 
-        {user.isAdmin && user.isStoreAdmin && (<div className={`${styles.left} ${isActive('/chat') ? styles.left_active : ''}`}><span className={`${styles.item} ${isActive('/chat') ? styles.active : ''}`} onClick={() => handleLinkClick('/chat')}><IoIosChatboxes  className={styles.ico} /><p>Chat</p></span></div>)}
-
-        {user.isAdmin && user.isStoreAdmin && (<div className={`${styles.left} ${isActive('/profile') ? styles.left_active : ''}`}><span className={`${styles.item} ${isActive('/profile') ? styles.active : ''}`} onClick={() => handleLinkClick('/profile')}><MdAccountCircle className={styles.ico} /><p>My profile</p></span></div>)}
-
-
-        {/* <span className={`${styles.item} ${isActive('/profile') ? styles.active : ''}`} onClick={() => handleLinkClick('/profile')}><MdAccountCircle className={styles.ico} /><p>My profile</p></span> */}
-
-
-        {/* {user.isAdmin && user.isStoreAdmin && (<span className={styles.item} onClick={() => handleLinkClick('/requests')}>My recent requests</span>)} */}
-
+        {user.isStoreAdmin && (<div className={`${styles.left} ${isActive('/profile') ? styles.left_active : ''}`}><span className={`${styles.item} ${isActive('/profile') ? styles.active : ''}`} onClick={() => handleLinkClick('/profile')}><MdAccountCircle className={styles.ico} /><p>My profile</p></span></div>)}
 
       </div>
       <div className={styles.logout} onClick={logout}>
